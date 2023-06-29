@@ -44,11 +44,11 @@ end
     
 % Evolução temporal
 numSteps = ceil(T/dt); % Número de passos de tempo
-psi = psi_0;
 
 ymax = 0;
 for t = 0:N
     % Calculo da função de onda no determinado tempo
+    psi = 0;
     for n = 1:N
         psi = psi + Cn(n)*exp(-1i*En(n)*t/hb).*sin(n*pi*x/L);
     end
