@@ -39,7 +39,7 @@ Cn = zeros(N, 1);
 En = zeros(N, 1);
 for n = 1:N
     En(n) = (n^2 * pi^2 * hb^2)/(2*m*L^2);      % Energia do n-ésimo estado
-    Cn(n) = trapz(psi_0.*sin(n*pi*x/L),x);      % Produto interno com a função de onda inicial
+    Cn(n) = L * trapz(psi_0.*sin(n*pi*x/L),x);      % Produto interno com a função de onda inicial
 end
     
 % Evolução temporal
